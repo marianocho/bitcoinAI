@@ -1,0 +1,12 @@
+[project]
+name = "agent-bitcoin-mvp"
+version = "0.1.0"
+description = "MVP educativo: preço BTC + notícias + resumo IA"
+authors = [{name = "Mariano Cho"}]
+requires-python = ">=3.11"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"

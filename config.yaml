@@ -1,0 +1,15 @@
+news:
+  feeds:
+    - name: CoinDesk
+      url: https://www.coindesk.com/arc/outboundfeeds/rss/
+    - name: Bitcoin Magazine
+      url: https://bitcoinmagazine.com/.rss/full/
+market:
+  base_url: https://api.coingecko.com/api/v3
+  vs_currency: usd
+app:
+  default_days: 30
+  signal:
+    ma_window: 30
+    bullish_threshold: 0.0 # preço atual acima da MA → levemente otimista
+    bearish_threshold: 0.0 # abaixo da MA → cautela
