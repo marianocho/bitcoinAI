@@ -1,4 +1,14 @@
 import streamlit as st
+import sys, pathlib
+import pandas as pd
+
+# 👇 Fallback para garantir que a raiz do projeto entre no sys.path
+ROOT = pathlib.Path(__file__).resolve().parents[1]  # .../bitcoinAI
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))
+
+from src.config import SETTINGS
+from src.data_sources.coingecko import get_btc_price
 from src.data_sources.rss import fetch_headlines
 from src.features.indicators import moving_average, educational_signal
 from src.agent.summarize import llm_summary
