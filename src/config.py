@@ -11,7 +11,7 @@ class Settings:
     data_dir: Path = ROOT / "data"
     config_path: Path = ROOT / "config.yaml"
     openai_key: str | None = os.getenv("OPENAI_API_KEY")
-    app_lang: str = os.getenv("APP_LANG", "pt-BR")
+    app_lang: str = os.getenv("APP_LANG", "pt")
 
 
     def yaml(self) -> dict:
