@@ -1,0 +1,11 @@
+# 1) ativar o ambiente
+source .venv/bin/activate
+
+# 2) garantir que o Python enxerga o pacote local
+export PYTHONPATH=$(pwd)
+
+# 3) (opcional mas recomendado 1x/dia) coletar e salvar o snapshot diário no CSV
+python scripts/run_daily.py
+
+# 4) iniciar a interface
+streamlit run app/streamlit_app.py
