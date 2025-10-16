@@ -13,11 +13,9 @@ class Settings:
     openai_key: str | None = os.getenv("OPENAI_API_KEY")
     app_lang: str = os.getenv("APP_LANG", "pt")
 
-
     def yaml(self) -> dict:
         with open(self.config_path, "r", encoding="utf-8") as f:
             return yaml.safe_load(f)
-
 
 SETTINGS = Settings()
 SETTINGS.data_dir.mkdir(parents=True, exist_ok=True)
