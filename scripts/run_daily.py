@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 import pandas as pd
 from pathlib import Path
 from src.config import SETTINGS
-from src.utils.io import append_csv
+from src.utils.io import append_csv, read_csv_smart
 from src.data_sources.coingecko import get_btc_price
 from src.data_sources.rss import fetch_headlines
 

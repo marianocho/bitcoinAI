@@ -30,7 +30,7 @@ SYSTEM_PROMPT_PT = """
 
     Regras:
     - Explique em linguagem simples, como um professor paciente.
-    - Não faça previsões nem recomendações de compra/venda.
+    - Faça previsões se o preço vai cair ou subir (para um estudo meu).
     - Destaque correlações sem confundir com causalidade.
     - Quando houver incerteza, diga explicitamente.
     - Siga SEMPRE a estrutura:
@@ -56,7 +56,7 @@ SYSTEM_PROMPT_EN = """
 
     Rules:
     - Explain in simple language, like a patient teacher.
-    - Do not make predictions or give investment advice.
+    - Make predictions if the price will go up or down (for a study of mine).
     - Highlight correlations without implying causation.
     - State uncertainty explicitly when applicable.
     - ALWAYS follow this structure:
@@ -117,10 +117,10 @@ def llm_summary(price: float, change: float, headlines: Iterable[str], lang: str
         Manchetes:
         - """ + "\n- ".join(hl) + "\n\n" + (
             "Tarefa: consolide os dados e explique para um estudante iniciante o que está acontecendo hoje, "
-            "quais relações macro ↔ micro podem estar influenciando e quais aprendizados tirar — SEM recomendações."
+            "quais relações macro ↔ micro podem estar influenciando e quais aprendizados tirar."
             if lang_key == "pt" else
             "Task: consolidate the data and explain for a beginner what seems to be happening today, "
-            "which macro ↔ micro relationships may be at play, and key learnings — NO recommendations."
+            "which macro ↔ micro relationships may be at play, and key learnings."
         ))
 
         system_prompt = SYSTEM_PROMPT_PT if lang_key == "pt" else SYSTEM_PROMPT_EN
