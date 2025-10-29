@@ -139,7 +139,7 @@ def llm_summary(price: float, change: float, headlines: Iterable[str], lang: str
         hs = HEADINGS[lang_key]
         must_have = [hs["current"], hs["news"], hs["connections"], hs["learnings"]]
         if not all(h in text for h in must_have):
-            # Pré-estrutura mínima para o caso do modelo fugir do formato
+            # Pré-estrutura mínima para o caso do modelo fugir do formato!
             fallback = (
                 f"{hs['current']}\n"
                 f"- BTC ${price:.2f}; 24h {change:+.2f}%\n\n"
