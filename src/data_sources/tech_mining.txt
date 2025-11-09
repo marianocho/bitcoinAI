@@ -1,0 +1,3 @@
+https://github.com/bitcoin/bitcoin/releases.atom
+https://bitcoinops.org/feed.xml
+https://cointelegraph.com/rss/tag/mining

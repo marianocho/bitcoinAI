@@ -1,0 +1,3 @@
+https://www.reuters.com/world/rss
+https://www.reuters.com/markets/commodities/energy/rss
+https://www.iea.org/rss/news.rss

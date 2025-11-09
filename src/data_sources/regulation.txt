@@ -1,0 +1,4 @@
+https://www.sec.gov/news/pressreleases.rss
+https://www.cftc.gov/PressRoom/PressReleases/rss.xml
+https://www.esma.europa.eu/press-news/esma-news/rss
+https://www.fca.org.uk/news/rss.xml

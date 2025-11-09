@@ -1,0 +1,4 @@
+https://www.federalreserve.gov/feeds/press_monetary.xml
+https://www.federalreserve.gov/feeds/press_all.xml
+https://www.bis.org/press_rss.xml
+https://www.ecb.europa.eu/press/pressconf/2024/html/index.en.rss

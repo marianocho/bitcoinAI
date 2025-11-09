@@ -1,4 +1,5 @@
 news:
+  feeds_dir: ./data/feeds
   feeds:
     - name: CoinDesk
       url: https://www.coindesk.com/arc/outboundfeeds/rss/

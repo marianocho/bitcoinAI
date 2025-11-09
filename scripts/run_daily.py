@@ -6,6 +6,7 @@ from src.config import SETTINGS
 from src.utils.io import append_csv
 from src.data_sources.coingecko import get_btc_price
 from src.data_sources.rss import fetch_headlines
+from src.data_sources.feeds_loader import load_all_feeds, load_feeds_by_category
 
 cfg = SETTINGS.yaml()
 
@@ -23,10 +24,9 @@ append_csv(market_path, pd.DataFrame([{
 }]))
 
 # 2) Notícias (headlines)
-feeds = cfg["news"]["feeds"]
+feeds_dir = SETTINGS.data_dir / "feeds"          # <— onde ficam os .txt
+feeds = load_all_feeds(feeds_dir)                # <— lista plana de URLs
 items = fetch_headlines(feeds, limit=5)
 for it in items:
     it["ts"] = now.isoformat()
 append_csv(news_path, pd.DataFrame(items))
-
-print("Saved market & news for", now.isoformat())
